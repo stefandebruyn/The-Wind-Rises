@@ -17,7 +17,7 @@ package org.firstinspires.ftc.teamcode.vv7797.opmode.control;
  * sensor (referred to as the "latch" in the code) catches the divider.
  *
  * Unfortunately, the time we had to prepare for UIL did not allow for the development of a back (far) plate multi-glyph. A basic 85 was
- * written, and no more. We instead decided to focus on a front (close) plate multi-glyph. Using range sensors inlaid in the glyph bay,
+ * written, and nothing more. We instead decided to focus on a front (close) plate multi-glyph. Using range sensors inlaid in the glyph bay,
  * glyph gathering was made persistent; the robot will push itself into the glyph pit, and it'll keep pushing until it gets something.
  * If this fails, the robot will back out and park before time runs out. All of this together allows for highly consistent autonomous
  * performance--85 points are guaranteed, and 100-115 points are achieved the vast majority of the time (the auto is programmed to
@@ -36,13 +36,13 @@ package org.firstinspires.ftc.teamcode.vv7797.opmode.control;
  * extremely infrequently in practice and never in competition. The chance was minuscule, but it was there nonetheless.
  *
  * Driving was perfected through two PIDs: one which corrects heading, and another which corrects velocity. These were perfectly tuned so
- * as to never overpower one another. Despite our best efforts, there were rare oddities that could cause this to happen. If the robot is
- * somehow lifted up and dropped again, the gyro PID can be tricked into making massive power corrections during the period of time that
+ * as to never overpower one another. However, despite our best efforts, there are rare oddities that can cause this to happen. If the robot is
+ * somehow lifted up and dropped again, the gyro PID can be tricked into making massive power corrections during the period of time in which
  * the robot loses contact with the ground. The robot will charge full speed ahead across the arena, the velocity PID being unable to
  * reciprocate fast enough. This was observed once in practice when the robot backed up into a misplaced glyph during cryptobox realignment.
  * A corner of the glyph caught under the jewel collector, and lifted the back of the robot clean off the floor. Time did not permit for an
  * adequate failsafe to be implemented and tested. Fortunately, this malfunction is caused by something so unusual that it was safe to
- * assume it would never happen in competition (which it didn't), and instead devote time to more pressing features.
+ * assume that it would never happen in competition (which it didn't), and instead devote time to more pressing features.
  *
  * HINDSIGHT
  *
