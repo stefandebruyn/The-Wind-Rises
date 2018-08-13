@@ -23,11 +23,11 @@ This sensor arm and alignment algorithm design were awarded the Robot Design Awa
 
 Additional ODSs in the cargo bay allowed for persistent glyph gathering. The robot would continue to push itself into the glyph pit until either time ran out or it collected something. Unfortunately, the short redesign period before UIL did not allow for the development of a far plate multiglyph, and the close plate multiglyph was only tuned for one trip.
 
-Driving was perfected with two PIDs; one which controlled velocity, and another which controlled heading. The synergy between these two controllers made for impressive [self-correcting driving](https://www.youtube.com/watch?v=FVmmPYAYJk8&feature=youtu.be).
+Driving was perfected with two PIDs; one for velocity, and one for heading. The synergy between these two controllers made for impressive [self-correcting driving](https://www.youtube.com/watch?v=FVmmPYAYJk8&feature=youtu.be).
 
 ### Problems
 
-All but one of the robot's motions are guided by sensors: a 4-inch left strafe adjustment made prior to relatching with the cryptobox for a multiglyph delivery. If the robot were to become significantly displaced parallel to the cryptobox during glyph gathering, the sensor arm could collide with a rail on realignment or miss the cryptobox entirely. Though this was never observed, likely thanks to strong PID control, it was still technically possible.
+All but one of the robot's motions are guided by sensors: a 4-inch left strafe adjustment made prior to relatching with the cryptobox for a multiglyph delivery. If the robot was to become significantly displaced parallel to the cryptobox during glyph gathering, the sensor arm could collide with a rail on realignment or miss the cryptobox entirely. Though this was never observed, likely thanks to strong PID control, it was still technically possible.
 
 If the robot ever lost contact with the ground, the sudden change in wheel velocities could trick the PID controllers into making false corrections. If the loss of contact lasted long enough, the velocity controller would go unregulated and send the robot flying forward at maximum speed indefinitely. This was observed once in practice when a misplaced glyph became lodged under the jewel collector and lifted the back half of the robot several inches off the ground. Fortunately, this malfunction was caused by something so unusual that it was safe to assume it would never happen in competition.
 
