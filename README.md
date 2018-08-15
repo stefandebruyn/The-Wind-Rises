@@ -19,7 +19,7 @@ Throughout the design process, an emphasis was placed on time optimization throu
 
 Cryptobox alignment was achieved by inserting a long arm equipped with sensors in between the cryptobox rails (referred to as dividers in the code). One ODS measured distance from the polycarb backing, and another measured distance from the rail. The robot will purposely undershoot (or overshoot, depending on its alliance color) the target column to ensure that the arm sensors lock onto the correct rail (referred to as latching in the code).
 
-This sensor arm and alignment algorithm design were awarded the Robot Design Award.
+This sensor arm and alignment algorithm design was awarded the Robot Design Award.
 
 Additional ODSs in the cargo bay allowed for persistent glyph gathering. The robot would continue to push itself into the glyph pit until either time ran out or it collected something. Unfortunately, the short redesign period before UIL did not allow for the development of a far plate multiglyph, and the close plate multiglyph was only tuned for one trip.
 
