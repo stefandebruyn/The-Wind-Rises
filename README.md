@@ -21,7 +21,7 @@ Cryptobox alignment was achieved by inserting a long arm equipped with sensors i
 
 This sensor arm and alignment algorithm design was awarded the Robot Design Award.
 
-Additional ODSs in the cargo bay allowed for persistent glyph gathering. The robot would continue to push itself into the glyph pit until either time ran out or it collected something. Unfortunately, the short redesign period before UIL did not allow for the development of a far plate multiglyph, and the close plate multiglyph was only tuned for one trip.
+Additional ODSs in the cargo bay allowed for persistent glyph gathering. The robot would continue to push itself into the glyph pit until either time was running low or it collected something. Unfortunately, the short redesign period before UIL did not allow for the development of a far plate multiglyph, and the close plate multiglyph was only tuned for one trip.
 
 Driving was perfected with two PIDs; one for velocity, and one for heading. The synergy between these two controllers made for impressive [self-correcting driving](https://www.youtube.com/watch?v=FVmmPYAYJk8&feature=youtu.be).
 
