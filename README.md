@@ -4,7 +4,7 @@
 
 ### Performance
 
-At the 2018 Texas UIL state championship, Nightfall successfully
+At the 2018 Texas UIL State Championship, Nightfall successfully
 * Scored preloaded glyph in 10/10 games
 * Collected additional glyphs in 8/10 games, where 2 of those collections were 2-glyph
 * Scored additional glyphs in 6/10 games
