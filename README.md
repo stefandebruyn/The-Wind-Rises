@@ -17,7 +17,7 @@ Failed multiglyph collections were due to unlucky arrangement of the pit. Failed
 
 Throughout the design process, an emphasis was placed on time optimization through concurrency without actual multithreading. Many instruction implementations allow additional, nested instructions to be executed within them, and an overarching concurrency schedule allows code that doesn't fit into the main instruction sequence to be executed at specific moments in time.
 
-Cryptobox alignment was achieved by inserting a long arm equipped with sensors in between the cryptobox rails (referred to as dividers in the code). One ODS measured distance from the polycarb backing, and another measured distance from the rail. The robot will purposely undershoot (or overshoot, depending on its alliance color) the target column to ensure that the arm sensors lock onto the correct rail (referred to as latching in the code).
+Cryptobox alignment was achieved by inserting a long arm equipped with sensors in between the cryptobox rails (referred to as dividers in the code). One ODS measured distance from the polycarb backing, and another measured distance from the rail. The robot would purposely undershoot (or overshoot, depending on its alliance color) the target column to ensure that the arm sensors locked onto the correct rail (referred to as latching in the code).
 
 This sensor arm and alignment algorithm design was awarded the Robot Design Award.
 
@@ -27,14 +27,14 @@ Driving was perfected with two PIDs; one for velocity, and one for heading. The 
 
 ### Problems
 
-All but one of the robot's motions are guided by sensors: a 4-inch left strafe adjustment made prior to relatching with the cryptobox for a multiglyph delivery. If the robot was to become significantly displaced parallel to the cryptobox during glyph gathering, the sensor arm could collide with a rail on realignment or miss the cryptobox entirely. Though this was never observed, likely thanks to strong PID control, it was still technically possible.
+All but one of the robot's motions are guided by sensors: a 4-inch left strafe adjustment made prior to relatching with the cryptobox for a multiglyph delivery. If the robot was to become significantly displaced parallel to the cryptobox during glyph gathering, the sensor arm could collide with a rail on realignment or miss the cryptobox entirely. Though this was never observed, it was still technically possible.
 
 If the robot ever lost contact with the ground, the sudden change in wheel velocities could trick the PID controllers into making false corrections. If the loss of contact lasted long enough, the velocity controller would go unregulated and send the robot flying forward at maximum speed indefinitely. This was observed once in practice when a misplaced glyph became lodged under the jewel collector and lifted the back half of the robot several inches off the ground. Fortunately, this malfunction was caused by something so unusual that it was safe to assume it would never happen in competition.
 
 ### Hindsight
 
-This code was written under massive time constraints and is by no means exemplar. If I had anticipated how large and messy the main class would become, I would have organized subsystems and instructions into their own classes.
+This code was written under massive time constraints and is by no means exemplar. If we had anticipated how large and messy the suite class would become, we would have organized subsystems and instructions into their own classes.
 
 Using computer vision to guide the parallel movement prior to cryptobox alignment would have eliminated the aforementioned state unlink possibility. This was our original intention, hence the phone's ability to swivel.
 
-Had we planned for odometry wheels in the drivetrain design, I would have liked to use Kalman filtering and more explicit motion profiling to boost localization accuracy.
+Had we planned for odometry wheels in the drivetrain design, we would have liked to use Kalman filtering and more explicit motion profiling to boost localization accuracy.
