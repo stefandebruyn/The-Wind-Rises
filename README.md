@@ -1,4 +1,4 @@
-### The Wind Rises
+# The Wind Rises
 > Il faut tenter de vivre.
 
 FTC Team 7797's autonomous control software for the 2018 University Interscholastic League Robotics Championship.
